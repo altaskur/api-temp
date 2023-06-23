@@ -2,9 +2,7 @@ const jws = require('jsonwebtoken');
 require('dotenv').config();
 
 function generateToken(ip) {
-  const payload = {
-    ip,
-  };
+  const payload = { ip };
 
   const token = jws.sign(payload, process.env.JWT_SECRET, { expiresIn: '6d' });
 

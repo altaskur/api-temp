@@ -17,5 +17,6 @@ const tempRouter = require('../router/temp');
 
 app.use('/api/token', authRouter);
 app.use('/api', tempRouter);
+app.use('/test', require('../router/test'));
 
 module.exports = app;

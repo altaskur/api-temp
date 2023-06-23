@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const projectsSchema = new mongoose.Schema({
+const tempSchema = new mongoose.Schema({
 
   temp: {
     type: Number,
@@ -19,10 +19,10 @@ const projectsSchema = new mongoose.Schema({
     default: Date.now,
   },
 }, {
-  collection: 'projects',
+  collection: 'temp',
   database: 'altasTemp',
 });
 
-const Projects = mongoose.model('projects', projectsSchema);
+const Temp = mongoose.model('temp', tempSchema);
 
-module.exports = Projects;
+module.exports = Temp;
